@@ -30,12 +30,12 @@ class App extends Component {
       data.append('file',this.uploadInput.files[0]);
       data.append('filename',this.fileName.value);
 
-      fetch('http://localhost:8000/upload',{
+      fetch('http://192.168.43.186:8000/upload',{
           method : 'POST',
           body : data,
       }).then((respnse)=> {
           respnse.json().then((body)=> {
-              this.setState({fichier : `http://localhost:8000/${body.file}`})
+              this.setState({fichier : `http://192.168.43.186:8000/${body.file}`})
           });
       });
 
