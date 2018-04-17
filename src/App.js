@@ -26,35 +26,7 @@ class App extends Component {
   }
 
 
-   /* getDuration = (f) =>
-    {
-        var d=0;
-        var video = document.createElement('video');
 
-
-        video.src = URL.createObjectURL(f);
-
-        video.onloadedmetadata = () => {
-
-            d=video.duration;
-            const state = this.state;
-            state.du = d;
-            this.setState(state);
-            console.log(this.state.du);
-
-        }
-
-
-       // console.log(d);
-
-    }*/
-
-    /*changeDu = (d)=> {
-        const state = this.state;
-        state.du = d;
-        this.setState(state);
-        console.log(this.state.du);
-        }*/
 
 
 
@@ -98,12 +70,12 @@ class App extends Component {
               data.append('file', this.uploadInput.files[0]);
               data.append('filename', this.fileName.value);
 
-              console.log(this.state.du);
 
 
 
 
-              //console.log(this.state.du),
+
+
               fetch('http://localhost:8000/upload', {
                   method: 'POST',
                   body: data,
